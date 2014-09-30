@@ -1,8 +1,28 @@
 Application {
-  backgroundColor: #ffffff;
+
+   backgroundImage: Embed('assets/images/main_background.png');
+   backgroundColor: #999999;
+   backgroundGradientColors: #ffffff, #ffffff;
+   backgroundGradientAlphas: 0.8, 0.73;
+   themeColor: #2c7ddb;
+   color: #28507e;
+   /*
+  backgroundColor: #000000;
+  */
 }
 
-ApplicationControlBar {
+ApplicationControlBar { /*yellow*/
+
+   highlightAlphas: 0, 0;
+   fillAlphas: 1, 1;
+   fillColors: #fbaf41, #f36f2d;
+   backgroundColor: #ffffff;
+   backgroundAlpha: 0;
+   cornerRadius: 0;
+   dropShadowEnabled: false;
+   color: #ffffff;
+   titleStyleName: "mypanelTitle";
+   /*
   highlightAlphas: 0.1, 0;
   fillAlphas: 0, 0;
   fillColors: #32343b, #32343b;
@@ -13,14 +33,33 @@ ApplicationControlBar {
   shadowDistance: 1;
   shadowDirection: center;
   dropShadowColor: #000000;
+  */
 }
 
 Panel {
+   borderStyle: solid;
+   borderColor: #2d7edc;
+   borderAlpha: 1;
+   borderThicknessLeft: 1;
+   borderThicknessTop: 0;
+   borderThicknessBottom: 0;
+   borderThicknessRight: 1;
+   roundedBottomCorners: false;
+   cornerRadius: 0;
+   headerHeight: 31;
+   backgroundAlpha: 1;
+   highlightAlphas: 0, 0;
+   headerColors: #2d7edc, #0f5fbb;
+   footerColors: #2d7edc, #0f5fbb;
+   dropShadowEnabled: false;
+   titleStyleName: "mypanelTitle";
+/*
   borderColor: #dfdfdf;
   borderAlpha: 1;
   shadowDistance: 1;
   dropShadowColor: #666666;
   titleStyleName: "mypanelTitle";
+  */
 }
 
 ToolTip {
@@ -30,20 +69,27 @@ ToolTip {
 }
 
 .mypanelTitle {
+ color: #ffffff;
+   fontFamily: Arial;
+   fontSize: 12;
+/*
+
   color: #444444;
   fontFamily: Arial;
   fontSize: 12;
+  */
 }
 
 .whiteboardToolbarStyle {
   backgroundColor: #CCCCCC;
-  cornerRadius: 5;
+  cornerRadius: 3;
   borderStyle: solid;
   borderThickness: 1;
   paddingBottom: 3;
   paddingTop: 3;
   paddingLeft: 3;
   paddingRight: 3;
+  /* siny kolor b2d1eb */
 }
 
 .meetingNameLabelStyle {
@@ -312,7 +358,7 @@ DataGrid {
 }
 
 .presentationZoomSliderLabelStyle {
-  color: #5e5f63;
+  color: #444444;
   fontFamily: Arial;
 }
 
@@ -372,7 +418,7 @@ DataGrid {
   borderThicknessBottom: 10;
   borderThicknessRight: 10;
   roundedBottomCorners: true;
-  cornerRadius: 5;
+  cornerRadius: 3;
   headerHeight: 20;
   backgroundAlpha: 1;
   headerColors: #b9babc, #b9babc;
@@ -401,7 +447,7 @@ DataGrid {
   textRollOverColor: #5e5f63;
   textSelectedColor: #5e5f63;
   borderColor: #b9babc;  
-  cornerRadius: 5;  
+  cornerRadius: 3;  
 }
 
 .presentationUploadCancelButtonStyle {
@@ -411,7 +457,7 @@ DataGrid {
   textRollOverColor: #5e5f63;
   textSelectedColor: #5e5f63;
   borderColor: #b9babc;  
-  cornerRadius: 5;    
+  cornerRadius: 3;    
 }
 
 .presentationUploadShowButtonStyle {
@@ -421,7 +467,7 @@ DataGrid {
   textRollOverColor: #5e5f63;
   textSelectedColor: #5e5f63;
   borderColor: #b9babc;  
-  cornerRadius: 5;  
+  cornerRadius: 3;  
 }
 
 .presentationUploadDeleteButtonStyle {
@@ -431,7 +477,7 @@ DataGrid {
   textRollOverColor: #5e5f63;
   textSelectedColor: #5e5f63;
   borderColor: #b9babc;  
-  cornerRadius: 5;    
+  cornerRadius: 3;    
   icon:   Embed('assets/images/trash.png');
 }
 
@@ -466,7 +512,7 @@ DataGrid {
   borderThicknessBottom: 10;
   borderThicknessRight: 10;
   roundedBottomCorners: true;
-  cornerRadius: 5;
+  cornerRadius: 3;
   headerHeight: 20;
   backgroundAlpha: 1;
   headerColors: #b9babc, #b9babc;
@@ -484,7 +530,7 @@ DataGrid {
   borderThicknessBottom: 10;
   borderThicknessRight: 10;
   roundedBottomCorners: true;
-  cornerRadius: 5;
+  cornerRadius: 3;
   headerHeight: 20;
   backgroundAlpha: 1;
   headerColors: #b9babc, #b9babc;
@@ -519,7 +565,7 @@ DataGrid {
   textRollOverColor: #5e5f63;
   textSelectedColor: #5e5f63;
   borderColor: #b9babc;  
-  cornerRadius: 5;      
+  cornerRadius: 3;      
 }
 
 .micSettingsWindowJoinButtonStyle {
@@ -530,7 +576,7 @@ DataGrid {
 	textRollOverColor: #5e5f63;
 	textSelectedColor: #5e5f63;
 	borderColor: #b9babc;  
-	cornerRadius: 5; 
+	cornerRadius: 3; 
 	icon:   Embed('assets/images/headset.png');
 }
 
@@ -542,7 +588,7 @@ DataGrid {
   textRollOverColor: #5e5f63;
   textSelectedColor: #5e5f63;
   borderColor: #b9babc;  
-  cornerRadius: 5;    
+  cornerRadius: 3;    
 }
 
 .micSettingsWindowMicProgressBarStyle {
@@ -566,13 +612,13 @@ DataGrid {
 MDIWindow { /*None of the following properties are overridden by the MDIWindow class*/
 	backgroundSize: '100%';
 	
-	cornerRadius: 5;
+	cornerRadius: 3;
 	dropShadowEnabled: false;
 	titleStyleName: "mypanelTitle";
 	
 	cornerResizeImg: Embed(source="assets/swf/Blue.swf", symbol="Corner_Resize");
 	cornerResizeWidth: 2;
-	cornerResizeHeight: 2;
+	cornerResizeHeight: 2;	
 	cornerResizePaddingRight: 2;
 	cornerResizePaddingBottom: 2;
 	
@@ -583,6 +629,27 @@ MDIWindow { /*None of the following properties are overridden by the MDIWindow c
 
 .mdiWindowFocus, .presentationWindowStyleFocus, .videoDockStyleFocus
 {
+   headerHeight: 26;
+   
+   headerColors: #2d7edc, #0f5fbb;  
+   borderStyle: solid;
+   borderColor: #2d7edc;
+   borderAlpha: 1;
+   borderThicknessLeft: 3;
+   borderThicknessTop: 0;
+   borderThicknessBottom: 0;
+   borderThicknessRight: 3;
+   cornerRadius: 3;
+   fillAlphas: 1, 1;
+   
+   backgroundColor: #f5f5f5;
+   backgroundAlpha: 1;
+   highlightAlphas: 0, 0;
+   
+   roundedBottomCorners: false;
+   footerColors: #f5f5f5, #cccccc;
+   dropShadowEnabled: false;
+/*
   headerHeight: 26;
   roundedBottomCorners: true;
   backgroundColor: #b9babc;
@@ -595,10 +662,36 @@ MDIWindow { /*None of the following properties are overridden by the MDIWindow c
   borderThicknessTop: 0;
   borderThicknessBottom: 3;
   borderThicknessRight: 3;
+  */
 }
 
 .mdiWindowNoFocus, .presentationWindowStyleNoFocus, .videoDockStyleNoFocus
 {
+   
+ 
+   
+   headerHeight: 26;
+   headerColors: #2d7edc, #0f5fbb;  
+   borderStyle: solid;
+   borderColor: #2d7edc;
+   borderAlpha: 1;
+   borderThicknessLeft: 3;
+   borderThicknessTop: 0;
+   borderThicknessBottom: 0;
+   borderThicknessRight: 3;
+   cornerRadius: 3;
+   fillAlphas: 1, 1;
+   
+   backgroundColor: #f5f5f5;
+   backgroundAlpha: 1;
+   highlightAlphas: 0, 0;
+   
+   roundedBottomCorners: false;
+   footerColors: #f5f5f5, #cccccc;
+   dropShadowEnabled: false;
+
+  
+/*
   headerHeight: 26;
   roundedBottomCorners: true;
   backgroundColor: #b9babc;
@@ -611,6 +704,7 @@ MDIWindow { /*None of the following properties are overridden by the MDIWindow c
   borderThicknessTop: 0;
   borderThicknessBottom: 3;
   borderThicknessRight: 3;
+   */
 }
 
 .presentationSlideViewStyle {
@@ -623,12 +717,32 @@ MDIWindow { /*None of the following properties are overridden by the MDIWindow c
   paddingLeft: 3;
   paddingRight: 3;
   bottom: 5;
-  cornerRadius: 0;
+  cornerRadius: 3;
   dropShadowEnabled: false;
 }
-
+/*Wideo*/
 .videoViewStyleNoFocus 
 {
+   headerHeight: 26;
+   headerColors: #2d7edc, #0f5fbb;  
+   borderStyle: solid;
+   borderColor: #2d7edc;
+   borderAlpha: 1;
+   borderThicknessLeft: 3;
+   borderThicknessTop: 0;
+   borderThicknessBottom: 0;
+   borderThicknessRight: 3;
+   cornerRadius: 3;
+   fillAlphas: 1, 1;
+   
+   backgroundColor: #f5f5f5;
+   backgroundAlpha: 1;
+   highlightAlphas: 0, 0;
+   
+   roundedBottomCorners: false;
+   footerColors: #f5f5f5, #cccccc;
+   dropShadowEnabled: false;
+   /*
   headerHeight: 20;
   roundedBottomCorners: true;
   backgroundColor: #e6e6e6;
@@ -641,22 +755,30 @@ MDIWindow { /*None of the following properties are overridden by the MDIWindow c
   borderThicknessTop: 0;
   borderThicknessBottom: 3;
   borderThicknessRight: 3;
+  */
 }
 
 .videoViewStyleFocus 
 {
-  headerHeight: 20;
-  roundedBottomCorners: true;
-  backgroundColor: #e6e6e6;
-  backgroundAlpha: 1;
-	
-  borderStyle: solid;
-  borderColor: #b9babc;
-  borderAlpha: 1;
-  borderThicknessLeft: 3;
-  borderThicknessTop: 0;
-  borderThicknessBottom: 3;
-  borderThicknessRight: 3;
+   headerHeight: 26;
+   headerColors: #2d7edc, #0f5fbb;  
+   borderStyle: solid;
+   borderColor: #2d7edc;
+   borderAlpha: 1;
+   borderThicknessLeft: 3;
+   borderThicknessTop: 0;
+   borderThicknessBottom: 0;
+   borderThicknessRight: 3;
+   cornerRadius: 3;
+   fillAlphas: 1, 1;
+   
+   backgroundColor: #f5f5f5;
+   backgroundAlpha: 1;
+   highlightAlphas: 0, 0;
+   
+   roundedBottomCorners: false;
+   footerColors: #f5f5f5, #cccccc;
+   dropShadowEnabled: false;
 }
 
 .videoPublishStyleNoFocus 
@@ -724,7 +846,7 @@ MDIWindow { /*None of the following properties are overridden by the MDIWindow c
 }
 
 .mypanelTitle {
-  color: #5e5f63;
+  color: #ffffff;
   fontFamily: Arial;
   fontSize: 12;
   fontWeight: bold;
@@ -800,7 +922,7 @@ Alert {
 	borderThicknessBottom: 10;
 	borderThicknessRight: 10;
 	roundedBottomCorners: true;
-	cornerRadius: 5;
+	cornerRadius: 3;
 	headerHeight: 20;
 	backgroundAlpha: 1;
 	headerColors: #b9babc, #b9babc;
@@ -826,4 +948,18 @@ Alert {
 
 .recordButtonStyleStop {
   icon:   Embed('assets/images/control-record-stop.png');
+}
+/* Dodatki */
+
+
+Button {
+   cornerRadius: 3;
+   fontFamily: Arial;
+   fontSize: 12;
+}
+PopUpButton {
+   cornerRadius: 3;
+}
+ComboBox {
+   cornerRadius: 3;
 }
