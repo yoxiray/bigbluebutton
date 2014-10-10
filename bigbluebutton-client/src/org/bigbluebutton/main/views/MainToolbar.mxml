@@ -186,6 +186,8 @@ with BigBlueButton; if not, see <http://www.gnu.org/licenses/>.
 			private function confirmLogout():void {
 				if (toolbarOptions.confirmLogout){
 					// Confirm logout using built-in alert
+					Alert.yesLabel = ResourceUtil.getInstance().getString('bbb.logout.confirm.yes');
+					Alert.noLabel = ResourceUtil.getInstance().getString('bbb.logout.confirm.no');
 					var alert:Alert = Alert.show(ResourceUtil.getInstance().getString('bbb.logout.confirm.message'), ResourceUtil.getInstance().getString('bbb.logout.confirm.title'), Alert.YES | Alert.NO, this, alertLogout, null, Alert.YES);
 					
           var newX:Number = btnLogout.x + btnLogout.width - alert.width;
