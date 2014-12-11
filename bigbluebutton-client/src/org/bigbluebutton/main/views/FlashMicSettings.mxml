@@ -417,7 +417,7 @@ with BigBlueButton; if not, see <http://www.gnu.org/licenses/>.
         <!-- Play Sound, Join and Cancel buttons -->
         <mx:HRule width="100%"/>
         <mx:HBox width="100%" horizontalAlign="right" horizontalGap="18" paddingTop="10">
-          <mx:Button id="echoTestButton" label="Next" 
+          <mx:Button id="echoTestButton" label="{ResourceUtil.getInstance().getString('bbb.micSettings.playSound.label')}"
                  click="echoTestButtonClickHandler()" styleName="micSettingsWindowPlaySoundButtonStyle"
                  toolTip="{ResourceUtil.getInstance().getString('bbb.micSettings.playSound.toolTip')}"/>
           <mx:Button id="playButton" label="{ResourceUtil.getInstance().getString('bbb.micSettings.playSound')}" 
