@@ -125,7 +125,7 @@ with BigBlueButton; if not, see <http://www.gnu.org/licenses/>.
 			</mx:VBox>
 		</mx:HBox>
 		<mx:HRule width="100%" />
-		<mx:Button id="cancelBtn" label="Cancel"
+		<mx:Button id="cancelBtn" label="{ResourceUtil.getInstance().getString('bbb.micSettings.cancel')}"
 				   click="onCancelClicked()" styleName="micSettingsWindowPlaySoundButtonStyle" />
 	</mx:VBox>
 </mx:TitleWindow>
